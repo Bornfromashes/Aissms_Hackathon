@@ -1,0 +1,23 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map_canvas {
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  width: 14.285%;
+  margin: 0 !important;
+  float: left;
+  padding: 23px;
+  border-radius: 0;
+  cursor: pointer;
+}
