@@ -12,8 +12,8 @@ var stringify = require('json-stringify-safe');
 global.fetch = require('node-fetch')
 const cc = require('cryptocompare')
 
-var accountSid = 'AC7dd0ed7e66f3cf5be43c7e855be66bc7'; // Your Account SID from www.twilio.com/console
-var authToken = 'cf3fe2fe77b0767c776e729786900f98'; // Your Auth Token from www.twilio.com/console
+var accountSid = '*******************************'; // Your Account SID from www.twilio.com/console
+var authToken = '********************************'; // Your Auth Token from www.twilio.com/console
 var twilio = require('twilio');
 var client = new twilio(accountSid, authToken);
 
@@ -28,7 +28,7 @@ app.set( 'views', path.join( __dirname, 'public/site/production' ));
 
 app.use(express.static(path.join('static')));
 
-const db= 'mongodb://qwe:qwe@ds129143.mlab.com:29143/try';
+const db= '*********************************';
 mongoose.Promise= global.Promise;
 
 mongoose.connect(db, function(err){
@@ -133,34 +133,10 @@ app.get('/indexheatmap.html', function(req, res){
 });
 
 
-
-/*  app.get('/view', function(req, res){
-  Video.find({}, function(err, videos){
-      if(err){
-        console.log("Error retrieving video");
-      }else{
-        console.log('Sucessful');
-    //    var str= videos.toString();
-        res.render('tables.html', {data: videos});
-     }
-    });
-    });
-*/
-
 var port = process.env.PORT || 2353;
 app.listen(port, function() {
 	console.log('Node.js listening on port ' + port);
 })
-/*router.get('/videos', function(req, res){
-  console.log('Get request for all videos');
-  Video.find({})
-  .exec(function(err, videos){
-    if(err){
-      console.log("Error retrieving videos");
-    }else{
-      res.render('index',{'data':videos});
-    }
-  });
-});
+
 */
 module.exports =router;
