@@ -19,5 +19,6 @@ A website to exchange supporting multiple cryptocurrencies/ tokens on a single p
 1. Install Node.Js
 2. clone the repository 
 3. Navigate to the repo
-4. run command node server.js
-5. open localhost:2353/index.html
+4. Edit server.js file to enter your mlab account details and twilio details
+5. run command node server.js
+6. open localhost:2353/index.html
