@@ -96,8 +96,8 @@ app.post('/OTP', function(req, res){
  var no= req.body.Phone;	
  client.messages.create({
     body: '22340',
-    to: '+917507934548',  // Text this number
-    from: '+12028497516' // From a valid Twilio number
+    to: '************',  // Text this number
+    from: '************' // From a valid Twilio number
 })
 .then((message) => console.log(message.sid));
 if (no== req.body.OTP)
@@ -105,33 +105,6 @@ if (no== req.body.OTP)
  	res.redirect('index.html');
  }
 });
-
-
-app.get('/profile.html', function(req, res){
-  console.log('profile');
-  res.render('profile.html');
-});
-app.get('/form.html', function(req, res){
-  console.log('complain');
-  res.render('form.html');
-});
-app.get('/billpay.html', function(req, res){
-  console.log('bill');
-  res.render('billpay.html');
-});
-app.get('/chartjs.html', function(req, res){
-  console.log('chart');
-  res.render('chartjs.html');
-});
-app.get('/tables_dynamic.html', function(req, res){
-  console.log('tables2');
-  res.render('tables_dynamic.html');
-});
-app.get('/indexheatmap.html', function(req, res){
-  console.log('heatmap');
-  res.render('indexheatmap.html');
-});
-
 
 var port = process.env.PORT || 2353;
 app.listen(port, function() {
